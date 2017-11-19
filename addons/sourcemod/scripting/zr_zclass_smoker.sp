@@ -36,14 +36,19 @@ new String:g_sprite;
 public void OnPluginStart()
 {
 	gCV_PEnabled 				= 	CreateConVar("sm_smoker_enabled", "1", "Responsible for the operation of the class on the server", 0, true, 0.0, true, 1.0);
-	gCV_PAttractingCooldown 	= 	CreateConVar("sm_smoker_cooldown", "18", "Time between each use", 0, true, 0.0, true, 60.0);
-	gCV_PAttractingDistance		= 	CreateConVar("sm_smoker_distance", "2000", "Maximum distance between attacker and victim", 0, true, 0.0, true, 10000.0);
-	gCV_PAttractingDamage		= 	CreateConVar("sm_smoker_damage", "700", "How much damage do I need to interrupt", 0, true, 0.0, true, 5000.0);
+	gCV_PAttractingCooldown 	= 	CreateConVar("sm_smoker_cooldown", "18.0", "Time between each use", 0, true, 0.0, true, 60.0);
+	gCV_PAttractingDistance		= 	CreateConVar("sm_smoker_distance", "2000.0", "Maximum distance between attacker and victim", 0, true, 0.0, true, 10000.0);
+	gCV_PAttractingDamage		= 	CreateConVar("sm_smoker_damage", "700.0", "How much damage do I need to interrupt", 0, true, 0.0, true, 5000.0);
 
 	gCV_PEnabled.AddChangeHook(ConVarChange);
 	gCV_PAttractingCooldown.AddChangeHook(ConVarChange);
 	gCV_PAttractingDistance.AddChangeHook(ConVarChange);
 	gCV_PAttractingDamage.AddChangeHook(ConVarChange);
+	
+	gB_PEnabled = gCV_PEnabled.BoolValue;
+	gF_PAttractingCooldown = gCV_PAttractingCooldown.FloatValue;
+	gF_PAttractingDistance = gCV_PAttractingDistance.FloatValue;
+	gF_PAttractingDamage = gCV_PAttractingDamage.FloatValue;
 	
 	AutoExecConfig(true, "zr_class_smoker", "zombiereloaded");
 	
