@@ -1,5 +1,5 @@
 ### Description
-* * Smoker is another zombie class for Zombie:Reloaded like Smoker in L4D. He can drags humans by holding Reloaded, like Smoker. If Smoker receives 700 damage by human drag ends.
+* Smoker is another zombie class for Zombie:Reloaded like Smoker in L4D. He can drags humans by holding Reloaded, like Smoker. If Smoker receives 700 damage by human drag ends.
 
 ### Requirements
 * This plugin requires Zombie:Reloaded and ZR Tools.
